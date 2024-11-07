@@ -4,11 +4,17 @@
 //IF YOU HAVE ISSUES WITH THE SIMULATOR, CONTACT EMBEDDED LEAD
 #include "mbed.h"
 
-int main() {
-    while (1) {
-        printf("Week 1 Exercise 2");
+DigitalOut led(LED1);
+AnalogIn pot(p20);
 
-        // MAKE SURE THERE IS ALWAYS A WAIT ON THE SIM OR IT WILL CRASH
-        wait_ms(500); 
+int main() {
+    float resistance;
+    while (1) {
+        led = !led;
+        resistance = pot.read();
+        
+        printf("The potentiometer reads %d\n", resistance );
+
+        wait_ms(2000*resistance);
     }
 }
