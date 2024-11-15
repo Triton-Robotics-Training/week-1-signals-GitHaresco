@@ -10,11 +10,14 @@ AnalogIn pot(p20);
 int main() {
     float resistance;
     while (1) {
-        led = !led;
         resistance = pot.read();
         
-        printf("The potentiometer reads %d\n", resistance );
-
+        printf("The potentiometer reads %f\n", resistance );
+        led = 1;
         wait_ms(2000*resistance);
+
+        
+        led = 0;
+        wait_ms(2000*(1 - resistance));
     }
 }
