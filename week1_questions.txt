@@ -1,6 +1,11 @@
 Question 1: Explain the difference between analog and digital signals.
+Analog signals exist within a non-discrete range of amplitudes and times, but digital signals 
+work in either on or off, high or low, true or false in addition to being discrete; even float values are
+discrete, just derived from large bit rates.
 
 Question 2: Give an example of something that uses digital signals and how it uses it.
+Keyboards rely on digital signals to determine if a key is pressed or not. All that matters is whether
+the voltage is zero or virtually 0, or above a threshold voltage that is translated into a 1 indicating a key is pressed.
 
 Question 3: Give an example of something that uses analog signals and how it uses it.
-
+The radio relies on analog signals, sending and recieving radio waves that contain sound or data. 
